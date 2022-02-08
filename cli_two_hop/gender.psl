@@ -1,0 +1,8 @@
+// People With the Same Edge are more likely to share a gender
+1: Edge(A, B) & Edge(B, C) & Gender(A, G) & (A != B) & (B != C) & (A != C) -> Gender(C, G) ^2
+
+// functional constraint
+Gender(P, +G) = 1 .
+
+// negative prior, make no initial assumptions
+1: !Gender(A, G) ^2
